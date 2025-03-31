@@ -1,0 +1,146 @@
+/* Logo styles */
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10; /* Higher z-index to keep the logo above other content */
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 10px;
+    left: 165px;
+    width: calc(100% - 225px);
+    background: #518CCA;
+    padding: 30px 30px;
+    display: flex;
+    align-items: center;
+    z-index: 9; /* Keep header above images */
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    white-space: nowrap;
+}
+
+/* Navigation bar styles */
+nav {
+    position: fixed;
+    left: 165px;
+    top: 100px;
+    width: calc(100% - 20px);
+    background: #e23636;
+    padding: 10px 20px;
+    z-index: 8; /* Keep navbar above images */
+}
+
+/* Navigation links styles */
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+}
+
+nav a:hover {
+    background: #5386E4;
+    color: white;
+}
+
+/* Image grid container */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 150px;
+    z-index: 1; /* Images appear behind the navbar, header, and logo */
+    position: relative; /* Ensures that z-index works */
+}
+
+/* Grid div styling */
+.grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 5px solid gold; /* Golden border for all images */
+}
+
+/* Exclude logo image from the border */
+.logo img {
+    border: none; /* No border for logo */
+}
+
+/* Info section styling */
+.info {
+    text-align: center;
+    padding: 10px;
+    background-color: #e23636;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.info p {
+    margin: 5px 0;
+    color: white;
+}
+
+/* Styling for the header above each image */
+.image-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #504a4a;
+    color: white;
+    border-radius: 5px;
+}
+
+.grid div:last-child,
+.grid div:nth-last-child(2) {
+    grid-column: span 2;
+    justify-self: center;
+}
+
+.grid a {
+    display: block;
+    text-decoration: none;
+}
+
+.grid a:hover img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Add a hover effect for the images */
+.grid a:hover img {
+    opacity: 0.8; /* Makes the image slightly transparent on hover */
+    transition: opacity 0.3s ease; /* Smooth transition for the hover effect */
+}
