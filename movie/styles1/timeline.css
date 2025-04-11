@@ -1,30 +1,36 @@
-/* Logo positioning */
-.logo { 
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato&display=swap');
+
+:root {
+  --heading-font: 'IM Fell French Canon SC', serif;
+  --paragraph-font: 'Lato', Helvetica, sans-serif;
+}
+
+.logo {
     position: fixed;
     top: 10px;
     left: 10px;
     padding: 0;
     display: flex;
     align-items: center;
-    z-index: 10; /* Higher z-index to keep the logo above other content */
+    z-index: 10;
 }
 
 .logo img {
     width: 150px;
     height: auto;
+    border: none; 
 }
 
-/* Header styles */
 header {
     position: fixed;
     top: 10px;
     left: 165px;
-    width: calc(100% - 165px); /* Adjust width to match the navbar width */
+    width: calc(100% - 225px);
     background: #518CCA;
     padding: 30px 30px;
     display: flex;
     align-items: center;
-    z-index: 9; /* Keep header above images */
+    z-index: 9;
 }
 
 h1 {
@@ -33,7 +39,6 @@ h1 {
     white-space: nowrap;
 }
 
-/* Navigation bar styles */
 nav {
     position: fixed;
     left: 165px;
@@ -41,13 +46,12 @@ nav {
     width: calc(100% - 20px);
     background: #e23636;
     padding: 10px 20px;
-    z-index: 8; /* Keep navbar above images */
-    border: 5px solid black; /* Thin gold border */
-    border-radius: 4px; /* Optional: rounded corners */
+    z-index: 8;
+    border: 5px solid black;
+    border-radius: 4px;
 }
 
-/* Navigation links styles */
-.nav-links {
+ul {
     display: flex;
     justify-content: space-around;
     padding: 0;
@@ -67,26 +71,18 @@ nav a:hover {
     color: white;
 }
 
-/* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4f4f4;
     color: #000;
     padding: 20px;
-    margin-top: 150px; /* Added margin-top to push content below the fixed nav */
+    margin-top: 150px;
 }
 
-/* Wrapper for each phase row */
 .phase {
     display: flex;
     flex-direction: row;
-    align-items: stretch; /* Aligns items to be the same height */
+    align-items: stretch; 
     justify-content: space-between;
     margin: 30px auto;
     padding: 0;
@@ -94,17 +90,15 @@ body {
     gap: 30px;
 }
 
-/* Red background only for text box */
 .text-content {
     background-color: #e23636;
     color: white;
     padding: 25px;
     border-radius: 12px;
     flex-direction: column;
-    justify-content: space-between; /* Ensures the content inside the text box is spaced out */
+    justify-content: space-between; 
 }
 
-/* Phase headers */
 .text-content h2 {
     background-color: #504a4a;
     padding: 12px 16px;
@@ -113,21 +107,55 @@ body {
     border-radius: 6px;
 }
 
-/* Movie list styling with bullets */
 .text-content p {
     padding: 8px 12px;
-    background-color: rgba(255, 255, 255, 0.1); /* subtle item background */
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
     font-size: 1rem;
 }
 
-/* Image styling */
 .phase img {
-    max-width: 600px; /* Increase image size */
+    max-width: 600px; 
     width: 100%;
-    height: 100%; /* Ensure the image takes up 100% height */
-    object-fit: cover; /* Maintain aspect ratio and cover the space */
+    height: 100%; 
+    object-fit: cover; 
     border: 3px solid gold;
     border-radius: 12px;
     flex-shrink: 0;
 }
+
+  footer {
+    background-color: #e23636;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    border-top: 5px solid black;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    color: #ffc107;
+  }
+  
+  body {
+    font-family: var(--paragraph-font);
+    background-color: #f4f4f4;
+    color: #000;
+    padding: 20px;
+    margin-top: 150px;
+  }
+  
+  h1, h2 {
+    font-family: var(--heading-font);
+  }
+  
+  nav a, .text-content p, footer, ul {
+    font-family: var(--paragraph-font);
+  }

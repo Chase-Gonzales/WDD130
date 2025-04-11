@@ -1,4 +1,10 @@
-/* Logo styles */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato&display=swap');
+
+:root {
+    --heading-font: 'IM Fell French Canon SC', serif;
+    --paragraph-font: 'Lato', Helvetica, sans-serif;
+  }
+
 .logo {
     position: fixed;
     top: 10px;
@@ -6,7 +12,7 @@
     padding: 0;
     display: flex;
     align-items: center;
-    z-index: 10; /* Higher z-index to keep the logo above other content */
+    z-index: 10; 
 }
 
 .logo img {
@@ -14,7 +20,6 @@
     height: auto;
 }
 
-/* Header styles */
 header {
     position: fixed;
     top: 10px;
@@ -24,7 +29,7 @@ header {
     padding: 30px 30px;
     display: flex;
     align-items: center;
-    z-index: 9; /* Keep header above images */
+    z-index: 9; 
 }
 
 h1 {
@@ -33,7 +38,6 @@ h1 {
     white-space: nowrap;
 }
 
-/* Navigation bar styles */
 nav {
     position: fixed;
     left: 165px;
@@ -41,12 +45,11 @@ nav {
     width: calc(100% - 20px);
     background: #e23636;
     padding: 10px 20px;
-    z-index: 8; /* Keep navbar above images */
-    border: 5px solid black; /* Thin gold border */
-    border-radius: 4px; /* Optional: rounded corners */
+    z-index: 8; 
+    border: 5px solid black; 
+    border-radius: 4px; 
 }
 
-/* Navigation links styles */
 ul {
     display: flex;
     justify-content: space-around;
@@ -67,18 +70,16 @@ nav a:hover {
     color: white;
 }
 
-/* Image grid container */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
-    margin-top: 150px;
-    z-index: 1; /* Images appear behind the navbar, header, and logo */
-    position: relative; /* Ensures that z-index works */
+    margin-top: 50px;
+    z-index: 1;
+    position: relative; 
 }
 
-/* Grid div styling */
 .grid div {
     display: flex;
     flex-direction: column;
@@ -90,15 +91,13 @@ nav a:hover {
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
-    border: 5px solid gold; /* Golden border for all images */
+    border: 5px solid gold; 
 }
 
-/* Exclude logo image from the border */
 .logo img {
-    border: none; /* No border for logo */
+    border: none; 
 }
 
-/* Info section styling */
 .info {
     text-align: center;
     padding: 10px;
@@ -113,7 +112,6 @@ nav a:hover {
     color: white;
 }
 
-/* Styling for the header above each image */
 .image-header {
     font-size: 1.2em;
     font-weight: bold;
@@ -141,8 +139,43 @@ nav a:hover {
     transition: opacity 0.3s ease;
 }
 
-/* Optional: Add a hover effect for the images */
 .grid a:hover img {
-    opacity: 0.8; /* Makes the image slightly transparent on hover */
-    transition: opacity 0.3s ease; /* Smooth transition for the hover effect */
+    opacity: 0.8; 
+    transition: opacity 0.3s ease; 
 }
+
+  footer {
+    background-color: #e23636;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    border-top: 5px solid black;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    color: #ffc107;
+  }
+
+  body {
+    font-family: var(--paragraph-font);
+    background-color: #f4f4f4;
+    color: #000;
+    padding: 20px;
+    margin-top: 150px;
+  }
+  
+  h1, h2 {
+    font-family: var(--heading-font);
+  }
+  
+  nav a, .text-content p, footer, ul {
+    font-family: var(--paragraph-font);
+  }
